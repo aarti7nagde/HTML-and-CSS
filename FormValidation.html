@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>
+        <center> FORM </center>
+    </h1>
+</head>
+
+<script>
+function validateform(){
+var email=document.FormValidation.email.value;
+if (Email==null || Email==""){
+  alert("email can't be blank");
+  return false;
+}
+else {
+  alert("email is correct");
+}
+
+function verifyPassword() {
+  var pw = document.getElementById("pswd").value;
+  //check empty password field
+  if(pw == "") {
+     document.getElementById("message").innerHTML = "**Fill the password please!";
+     return false;
+  }
+
+ //minimum password length validation
+  if(pw.length < 8) {
+     document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+     return false;
+  }
+
+//maximum length of password validation
+  if(pw.length > 15) {
+     document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+     return false;
+  } else {
+     alert("Password is correct");
+  }
+}
+</script>
+
+<body style="background-color:LightGray">
+    <center>
+        <form name="FormValidation" method="post" onsubmit="return validateform()" >
+            <fieldset>
+                <label for="Name">First Name : </label>
+                <input type="text" name="name" required />
+                <br>
+
+                <p><u><i>Hint</u> : Name is required</i></p>
+
+                <label for="Email">Email : </label>
+                <input type="email" name="email" required />
+                <br><br>
+                <td> Password </td>
+                <input type = "password" id = "pswd" value = "">
+                <span id = "message" style="color:red"> </span> <br><br>
+                <input type="submit" value="Submit">
+              </fieldset>
+        </center>
+    </body>
+  </html>

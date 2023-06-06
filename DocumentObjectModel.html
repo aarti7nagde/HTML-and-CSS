@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript and the DOM</title>
+    <script>
+        // This JavaScript program will manipulate the DOM
+        function changeColor() {
+            var element = document.getElementById("myElement");
+            element.style.backgroundColor = "yellow";
+            element.style.color = "blue";
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript and the DOM</h1>
+    <p id="myElement">This is a paragraph that can be manipulated with JavaScript.</p>
+    <button onclick="changeColor()">Change Color</button>
+</body>
+</html>

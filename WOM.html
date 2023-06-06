@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript and the WOM</title>
+    <script>
+        // This JavaScript program will manipulate the WOM
+        function openWindow() {
+            var myWindow = window.open("https://www.example.com/", "_blank", "width=500, height=500");
+        }
+        function resizeWindow() {
+            var myWindow = window.open("", "", "width=800, height=600");
+            myWindow.resizeTo(800, 600);
+        }
+        function closeWindow() {
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript and the WOM</h1>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="resizeWindow()">Resize Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+</body>
+</html>

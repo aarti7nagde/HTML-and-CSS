@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        html,body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <title>DOM</title>
+</head>
+
+<body>
+    <div id="page-main">
+        <h1 align="center">DOM</h1>
+        <h3>This is For "getElementsByClassName"</h3>
+        <ul>
+            <li class="ab">ONE</li>
+            <li>TWO</li>
+            <li>THREE</li>
+            <li class="ab">FOUR</li>
+        </ul>
+        <h3>This is For "getElementById"</h3>
+        <div>Hello! My name is Vishwajeet</div>
+        <p id="abc">I am a good boy</p>
+        <h3>This is For "getElementsByTagName"</h3>
+        <span>This is for getElementsByTagName</span>
+    </div>
+    <script>
+        let cl = document.getElementsByClassName("ab");
+        for (let i = 0; i < cl.length; i++) {
+            cl[i].innerHTML = "NEW LIST";
+        }
+        document.getElementById("abc").innerHTML = "In this we have made some changes using javascript like background color, color, fontsize, fontFamily";
+        let a = document.getElementById("abc");
+        a.style.background = "yellow";
+        a.style.color = "blue";
+        a.style.fontSize = "larger";
+        a.style.fontFamily = "Arial";
+        document.getElementsByTagName("span")[0].style.color = "red";
+        document.getElementsByTagName("span")[0].innerHTML = "This is an Example of getElementsByTagName";
+    </script>
+</body>
+
+</html>
